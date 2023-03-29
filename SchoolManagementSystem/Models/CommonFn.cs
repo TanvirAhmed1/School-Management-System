@@ -30,7 +30,7 @@ namespace SchoolManagementSystem.Models
                     con.Open();
                 }
                 SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 dataAdapter.Fill(dt);
                 return dt;
